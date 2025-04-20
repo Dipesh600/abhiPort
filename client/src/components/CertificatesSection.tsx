@@ -81,17 +81,17 @@ export default function CertificatesSection() {
           {certificates.map((certificate) => (
             <motion.div
               key={certificate.id}
-              className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow p-6"
+              className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-md transition-shadow p-6"
               variants={itemVariants}
             >
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary-100 mb-4 mx-auto">
-                <i className={`${certificate.icon} text-primary text-2xl`}></i>
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary-100 dark:bg-primary-900/30 mb-4 mx-auto">
+                <i className={`${certificate.icon} text-primary dark:text-primary-400 text-2xl`}></i>
               </div>
-              <h3 className="text-xl font-bold text-center text-gray-800 mb-2">{certificate.title}</h3>
-              <p className="text-center text-primary mb-4">{certificate.issuer}</p>
-              <p className="text-center text-gray-600 mb-4">{certificate.period}</p>
+              <h3 className="text-xl font-bold text-center text-gray-800 dark:text-white mb-2">{certificate.title}</h3>
+              <p className="text-center text-primary dark:text-primary-400 mb-4">{certificate.issuer}</p>
+              <p className="text-center text-gray-600 dark:text-gray-400 mb-4">{certificate.period}</p>
               <div className="flex justify-center">
-                <a href="#" className="text-primary hover:text-primary-700 font-medium">
+                <a href="#" className="text-primary dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium">
                   View Certificate
                 </a>
               </div>

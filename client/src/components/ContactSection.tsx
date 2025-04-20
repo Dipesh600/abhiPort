@@ -82,7 +82,7 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
@@ -91,9 +91,9 @@ export default function ContactSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="max-w-3xl mx-auto text-gray-600 text-lg">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Get In Touch</h2>
+          <div className="w-20 h-1 bg-primary dark:bg-primary-400 mx-auto mb-6"></div>
+          <p className="max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg">
             Feel free to reach out to me for collaborations, opportunities, or just to say hello!
           </p>
         </motion.div>
@@ -101,24 +101,24 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Contact Form */}
           <motion.div
-            className="bg-gray-50 p-8 rounded-xl shadow-md"
+            className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-md"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="text-2xl font-semibold text-gray-800 mb-6">Send Me a Message</h3>
+            <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-6">Send Me a Message</h3>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="mb-4">
-                <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+                <label htmlFor="name" className="block text-gray-700 dark:text-gray-300 font-medium mb-2">
                   Name
                 </label>
                 <input
                   type="text"
                   id="name"
                   className={`w-full px-4 py-3 border ${
-                    errors.name ? "border-red-500" : "border-gray-300"
-                  } rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500`}
+                    errors.name ? "border-red-500" : "border-gray-300 dark:border-gray-600"
+                  } rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400`}
                   {...register("name", { required: "Name is required" })}
                 />
                 {errors.name && (
@@ -126,15 +126,15 @@ export default function ContactSection() {
                 )}
               </div>
               <div className="mb-4">
-                <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+                <label htmlFor="email" className="block text-gray-700 dark:text-gray-300 font-medium mb-2">
                   Email
                 </label>
                 <input
                   type="email"
                   id="email"
                   className={`w-full px-4 py-3 border ${
-                    errors.email ? "border-red-500" : "border-gray-300"
-                  } rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500`}
+                    errors.email ? "border-red-500" : "border-gray-300 dark:border-gray-600"
+                  } rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400`}
                   {...register("email", {
                     required: "Email is required",
                     pattern: {
@@ -148,15 +148,15 @@ export default function ContactSection() {
                 )}
               </div>
               <div className="mb-4">
-                <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">
+                <label htmlFor="subject" className="block text-gray-700 dark:text-gray-300 font-medium mb-2">
                   Subject
                 </label>
                 <input
                   type="text"
                   id="subject"
                   className={`w-full px-4 py-3 border ${
-                    errors.subject ? "border-red-500" : "border-gray-300"
-                  } rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500`}
+                    errors.subject ? "border-red-500" : "border-gray-300 dark:border-gray-600"
+                  } rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400`}
                   {...register("subject", { required: "Subject is required" })}
                 />
                 {errors.subject && (
@@ -164,15 +164,15 @@ export default function ContactSection() {
                 )}
               </div>
               <div className="mb-6">
-                <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+                <label htmlFor="message" className="block text-gray-700 dark:text-gray-300 font-medium mb-2">
                   Message
                 </label>
                 <textarea
                   id="message"
                   rows={4}
                   className={`w-full px-4 py-3 border ${
-                    errors.message ? "border-red-500" : "border-gray-300"
-                  } rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500`}
+                    errors.message ? "border-red-500" : "border-gray-300 dark:border-gray-600"
+                  } rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400`}
                   {...register("message", { required: "Message is required" })}
                 ></textarea>
                 {errors.message && (

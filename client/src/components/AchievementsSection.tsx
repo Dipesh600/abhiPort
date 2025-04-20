@@ -44,7 +44,7 @@ export default function AchievementsSection() {
   };
 
   return (
-    <section id="achievements" className="py-20 bg-gray-50">
+    <section id="achievements" className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
@@ -53,9 +53,9 @@ export default function AchievementsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Achievements</h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="max-w-3xl mx-auto text-gray-600 text-lg">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Achievements</h2>
+          <div className="w-20 h-1 bg-primary dark:bg-primary-400 mx-auto mb-6"></div>
+          <p className="max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg">
             Recognition and accomplishments throughout my academic journey.
           </p>
         </motion.div>
@@ -70,7 +70,7 @@ export default function AchievementsSection() {
           {achievements.map((achievement) => (
             <motion.div
               key={achievement.id}
-              className="bg-white p-6 rounded-xl shadow-md relative overflow-hidden"
+              className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md relative overflow-hidden"
               variants={itemVariants}
             >
               <div className="absolute top-0 right-0 w-20 h-20">
@@ -78,11 +78,11 @@ export default function AchievementsSection() {
                   {achievement.badge}
                 </div>
               </div>
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary-100 mb-4">
-                <i className={`${achievement.icon} text-primary text-2xl`}></i>
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary-100 dark:bg-primary-900/30 mb-4">
+                <i className={`${achievement.icon} text-primary dark:text-primary-400 text-2xl`}></i>
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">{achievement.title}</h3>
-              <p className="text-gray-600 mb-4">{achievement.description}</p>
+              <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">{achievement.title}</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">{achievement.description}</p>
             </motion.div>
           ))}
         </motion.div>
