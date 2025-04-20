@@ -97,11 +97,15 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               id="mobileMenuButton"
-              className="text-gray-700 hover:text-primary focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 focus:outline-none"
               onClick={toggleMobileMenu}
               aria-label="Toggle mobile menu"
             >
-              <i className="fas fa-bars text-xl"></i>
+              {mobileMenuOpen ? (
+                <i className="fas fa-times text-xl"></i>
+              ) : (
+                <i className="fas fa-bars text-xl"></i>
+              )}
             </button>
           </div>
         </div>
