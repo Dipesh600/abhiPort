@@ -104,7 +104,7 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
@@ -113,9 +113,9 @@ export default function ProjectsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Projects</h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="max-w-3xl mx-auto text-gray-600 text-lg">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Projects</h2>
+          <div className="w-20 h-1 bg-primary dark:bg-primary-400 mx-auto mb-6"></div>
+          <p className="max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg">
             A collection of my recent work showcasing my technical skills and problem-solving abilities.
           </p>
         </motion.div>
@@ -130,7 +130,7 @@ export default function ProjectsSection() {
           {projects.map((project) => (
             <motion.div
               key={project.id}
-              className="project-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2"
+              className="project-card bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2"
               variants={itemVariants}
             >
               <div
@@ -139,26 +139,26 @@ export default function ProjectsSection() {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <i className={`${project.icon} text-white text-5xl`}></i>
                 </div>
-                <div className="absolute top-3 right-3 bg-white bg-opacity-90 px-3 py-1 rounded-full text-xs font-semibold text-gray-700">
+                <div className="absolute top-3 right-3 bg-white dark:bg-gray-800 bg-opacity-90 dark:bg-opacity-90 px-3 py-1 rounded-full text-xs font-semibold text-gray-700 dark:text-gray-300">
                   {project.period}
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
+                <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">{project.title}</h3>
                 <div className="flex gap-2 mb-4 flex-wrap">
                   {project.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                      className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs font-medium px-2.5 py-0.5 rounded"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
                 <div className="mt-4">
                   <button
-                    className="text-primary hover:text-primary-700 font-medium flex items-center"
+                    className="text-primary dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium flex items-center"
                     onClick={() => openModal(project.id)}
                   >
                     View Details <i className="fas fa-chevron-right ml-2 text-sm"></i>

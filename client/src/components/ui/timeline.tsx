@@ -16,7 +16,7 @@ interface TimelineProps {
 export default function Timeline({ items }: TimelineProps) {
   return (
     <div className="relative timeline max-w-3xl mx-auto pl-8">
-      <div className="absolute left-0 top-0 h-full w-0.5 bg-gray-200"></div>
+      <div className="absolute left-0 top-0 h-full w-0.5 bg-gray-200 dark:bg-gray-600"></div>
       
       {items.map((item, index) => (
         <motion.div
@@ -27,19 +27,19 @@ export default function Timeline({ items }: TimelineProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
         >
-          <div className="absolute left-0 top-0 w-4 h-4 bg-primary rounded-full -translate-x-1.5"></div>
-          <div className="bg-white p-6 rounded-xl shadow-md ml-4">
+          <div className="absolute left-0 top-0 w-4 h-4 bg-primary dark:bg-primary-400 rounded-full -translate-x-1.5"></div>
+          <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md ml-4">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div>
-                <h3 className="text-xl font-bold text-gray-800">{item.institution}</h3>
-                <p className="text-primary font-medium">{item.degree}</p>
-                <p className="text-gray-600 mt-1">{item.location}</p>
+                <h3 className="text-xl font-bold text-gray-800 dark:text-white">{item.institution}</h3>
+                <p className="text-primary dark:text-primary-400 font-medium">{item.degree}</p>
+                <p className="text-gray-600 dark:text-gray-400 mt-1">{item.location}</p>
               </div>
               <div className="flex flex-col items-start md:items-end">
-                <span className="bg-primary-100 text-primary-800 text-sm font-medium px-3 py-1 rounded">
+                <span className="bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 text-sm font-medium px-3 py-1 rounded">
                   {item.period}
                 </span>
-                <p className="text-gray-600 mt-2">{item.grade}</p>
+                <p className="text-gray-600 dark:text-gray-400 mt-2">{item.grade}</p>
               </div>
             </div>
           </div>

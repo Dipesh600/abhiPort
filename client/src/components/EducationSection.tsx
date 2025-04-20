@@ -30,7 +30,7 @@ export default function EducationSection() {
   ];
 
   return (
-    <section id="education" className="py-20 bg-gray-50">
+    <section id="education" className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
@@ -39,9 +39,9 @@ export default function EducationSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Education</h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="max-w-3xl mx-auto text-gray-600 text-lg">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Education</h2>
+          <div className="w-20 h-1 bg-primary dark:bg-primary-400 mx-auto mb-6"></div>
+          <p className="max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg">
             My academic journey and educational background.
           </p>
         </motion.div>

@@ -44,45 +44,45 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
             </span>
 
             <motion.div
-              className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-3xl sm:w-full"
+              className="inline-block align-bottom bg-white dark:bg-gray-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-3xl sm:w-full"
               initial="hidden"
               animate="visible"
               exit="exit"
               variants={modalVariants}
             >
-              <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+              <div className="bg-white dark:bg-gray-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div className="sm:flex sm:items-start">
                   <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
-                    <h3 className="text-2xl leading-6 font-bold text-gray-900 mb-4">{project.title}</h3>
+                    <h3 className="text-2xl leading-6 font-bold text-gray-900 dark:text-white mb-4">{project.title}</h3>
                     <div className="mt-2">
-                      <p className="text-gray-600 mb-4">{project.fullDescription}</p>
-                      <h4 className="text-lg font-semibold text-gray-800 mb-2">Key Features:</h4>
-                      <ul className="list-disc list-inside text-gray-600 mb-4">
+                      <p className="text-gray-600 dark:text-gray-400 mb-4">{project.fullDescription}</p>
+                      <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">Key Features:</h4>
+                      <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 mb-4">
                         {project.features.map((feature, index) => (
                           <li key={index}>{feature}</li>
                         ))}
                       </ul>
-                      <h4 className="text-lg font-semibold text-gray-800 mb-2">Technologies Used:</h4>
+                      <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">Technologies Used:</h4>
                       <div className="flex flex-wrap gap-2 mb-4">
                         {project.technologies.map((tech, index) => (
                           <span
                             key={index}
-                            className="bg-primary-100 text-primary-800 text-sm font-medium px-3 py-1 rounded"
+                            className="bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 text-sm font-medium px-3 py-1 rounded"
                           >
                             {tech}
                           </span>
                         ))}
                       </div>
-                      <h4 className="text-lg font-semibold text-gray-800 mb-2">Outcomes:</h4>
-                      <p className="text-gray-600">{project.outcome}</p>
+                      <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">Outcomes:</h4>
+                      <p className="text-gray-600 dark:text-gray-400">{project.outcome}</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+              <div className="bg-gray-50 dark:bg-gray-700 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                 <button
                   type="button"
-                  className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                  className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 dark:border-gray-600 shadow-sm px-4 py-2 bg-white dark:bg-gray-800 text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 dark:focus:ring-primary-400 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
                   onClick={onClose}
                 >
                   Close
