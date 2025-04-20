@@ -181,7 +181,7 @@ export default function ContactSection() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-primary hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-md transition duration-300 flex justify-center"
+                className="w-full bg-primary dark:bg-primary-600 hover:bg-primary-700 dark:hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-md transition duration-300 flex justify-center"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
@@ -206,26 +206,26 @@ export default function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="text-2xl font-semibold text-gray-800 mb-6">Contact Information</h3>
+            <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-6">Contact Information</h3>
             <div className="space-y-6">
               {contactInfo.map((item) => (
                 <div key={item.id} className="flex items-start">
-                  <div className="flex-shrink-0 h-12 w-12 flex items-center justify-center rounded-lg bg-primary-100 text-primary">
+                  <div className="flex-shrink-0 h-12 w-12 flex items-center justify-center rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary dark:text-primary-400">
                     <i className={`${item.icon} text-xl`}></i>
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-lg font-medium text-gray-800">{item.title}</h4>
+                    <h4 className="text-lg font-medium text-gray-800 dark:text-white">{item.title}</h4>
                     {item.href ? (
                       <a
                         href={item.href}
                         target={item.href.startsWith("http") ? "_blank" : undefined}
                         rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                        className="text-gray-600 hover:text-primary transition-colors"
+                        className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary-400 transition-colors"
                       >
                         {item.value}
                       </a>
                     ) : (
-                      <p className="text-gray-600">{item.value}</p>
+                      <p className="text-gray-600 dark:text-gray-400">{item.value}</p>
                     )}
                   </div>
                 </div>

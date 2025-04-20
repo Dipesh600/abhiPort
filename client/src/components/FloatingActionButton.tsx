@@ -11,7 +11,7 @@ export default function FloatingActionButton() {
       <a
         href="/attached_assets/Abhishek_kumar_singh_12204322_ General_cv.docx"
         download
-        className="bg-primary hover:bg-primary-700 text-white h-14 w-14 rounded-full flex items-center justify-center shadow-lg transition duration-300"
+        className="bg-primary dark:bg-primary-600 hover:bg-primary-700 dark:hover:bg-primary-700 text-white h-14 w-14 rounded-full flex items-center justify-center shadow-lg transition duration-300"
         title="Download CV"
         aria-label="Download CV"
       >
