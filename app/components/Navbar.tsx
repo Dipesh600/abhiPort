@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Link } from "wouter";
 import { useTheme } from "next-themes";
 
 export default function Navbar() {
