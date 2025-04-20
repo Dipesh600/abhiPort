@@ -6,9 +6,9 @@ interface ProgressBarProps {
 
 export default function ProgressBar({ percentage }: ProgressBarProps) {
   return (
-    <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+    <div className="h-2 bg-gray-200 dark:bg-gray-600 rounded-full overflow-hidden">
       <motion.div
-        className="h-full bg-primary rounded-full"
+        className="h-full bg-primary dark:bg-primary-400 rounded-full"
         initial={{ width: 0 }}
         whileInView={{ width: `${percentage}%` }}
         viewport={{ once: true }}

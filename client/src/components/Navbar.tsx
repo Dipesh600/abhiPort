@@ -94,7 +94,7 @@ export default function Navbar() {
                 e.preventDefault();
                 scrollToSection("contact");
               }}
-              className="bg-primary text-white hover:bg-primary-700 px-4 py-2 rounded-md text-sm font-medium transition duration-150"
+              className="bg-primary dark:bg-primary-600 text-white hover:bg-primary-700 dark:hover:bg-primary-700 px-4 py-2 rounded-md text-sm font-medium transition duration-150"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: navItems.length * 0.1 }}
@@ -175,7 +175,7 @@ export default function Navbar() {
               e.preventDefault();
               scrollToSection("contact");
             }}
-            className="block px-3 py-2 rounded-md text-base font-medium bg-primary text-white hover:bg-primary-700"
+            className="block px-3 py-2 rounded-md text-base font-medium bg-primary dark:bg-primary-600 text-white hover:bg-primary-700 dark:hover:bg-primary-700"
           >
             Contact
           </a>

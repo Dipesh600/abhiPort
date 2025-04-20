@@ -88,42 +88,42 @@ export default function SkillsSection() {
           {/* Soft Skills & Areas of Interest */}
           <div className="space-y-10">
             <motion.div
-              className="bg-white p-8 rounded-xl shadow-md"
+              className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-md"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-semibold text-gray-800 mb-6">Soft Skills</h3>
+              <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">Soft Skills</h3>
               <div className="grid grid-cols-2 gap-4">
                 {softSkills.map((skill, index) => (
                   <motion.div
                     key={index}
-                    className="bg-gray-50 p-4 rounded-lg flex items-center"
+                    className="bg-gray-50 dark:bg-gray-600 p-4 rounded-lg flex items-center"
                     variants={itemVariants}
                   >
-                    <div className="h-10 w-10 rounded-full bg-primary-100 flex items-center justify-center mr-3">
-                      <i className={`${skill.icon} text-primary`}></i>
+                    <div className="h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mr-3">
+                      <i className={`${skill.icon} text-primary dark:text-primary-400`}></i>
                     </div>
-                    <span className="font-medium text-gray-700">{skill.name}</span>
+                    <span className="font-medium text-gray-700 dark:text-gray-300">{skill.name}</span>
                   </motion.div>
                 ))}
               </div>
             </motion.div>
 
             <motion.div
-              className="bg-white p-8 rounded-xl shadow-md"
+              className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-md"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-semibold text-gray-800 mb-6">Areas of Interest</h3>
+              <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">Areas of Interest</h3>
               <div className="flex flex-wrap gap-3">
                 {interests.map((interest, index) => (
                   <motion.span
                     key={index}
-                    className="px-4 py-2 rounded-full bg-primary-100 text-primary-700 font-medium"
+                    className="px-4 py-2 rounded-full bg-primary-100 dark:bg-primary-900/40 text-primary-700 dark:text-primary-300 font-medium"
                     variants={itemVariants}
                   >
                     {interest}
