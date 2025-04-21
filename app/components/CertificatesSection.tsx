@@ -12,6 +12,7 @@ export default function CertificatesSection() {
       period: "Jun 2024 - Dec 2024",
       icon: "fas fa-cloud",
       status: "In Progress",
+      image: "/assets/fundamentals.jpeg"
     },
     {
       id: 2,
@@ -20,6 +21,7 @@ export default function CertificatesSection() {
       period: "Aug 2024",
       icon: "fas fa-brain",
       link: "https://coursera.org/verify/Y08PQ1UBLXMF",
+      image: "/assets/mlm.jpeg"
     },
     {
       id: 3,
@@ -28,6 +30,7 @@ export default function CertificatesSection() {
       period: "Feb 2023",
       icon: "fas fa-chart-pie",
       link: "https://coursera.org/verify/4PXU84YPFGA5",
+      image: "/assets/fundamentals.jpeg"
     },
     {
       id: 4,
@@ -36,6 +39,7 @@ export default function CertificatesSection() {
       period: "Mar 2024",
       icon: "fas fa-code",
       link: "https://media.geeksforgeeks.org/courses/certificates/86498fbe80b836a1bb15c9b7d7c0a0a9.pdf",
+      image: "/assets/gfg.jpg"
     },
     {
       id: 5,
@@ -44,6 +48,7 @@ export default function CertificatesSection() {
       period: "Nov 2023",
       icon: "fab fa-c",
       link: "https://www.coursera.org/account/accomplishments/specialization/YBAC663PLLTJ",
+      image: "/assets/c++.jpeg"
     },
     {
       id: 6,
@@ -100,14 +105,14 @@ export default function CertificatesSection() {
               className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-md transition-shadow p-6"
               variants={itemVariants}
             >
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary-100 dark:bg-primary-900/30 mb-4 mx-auto">
-                <i className={`${certificate.icon} text-primary dark:text-primary-400 text-2xl`}></i>
-              </div>
-              <h3 className="text-xl font-bold text-center text-gray-800 dark:text-white mb-2">{certificate.title}</h3>
-              <p className="text-center text-primary dark:text-primary-400 mb-2">{certificate.issuer}</p>
-              <p className="text-center text-gray-600 dark:text-gray-400 mb-4">{certificate.period}</p>
-              
-              {certificate.image && (
+              {certificate.status === "In Progress" ? (
+                <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                  <div className="text-center">
+                    <i className="fas fa-clock text-4xl text-primary dark:text-primary-400 mb-2"></i>
+                    <p className="text-gray-600 dark:text-gray-300 font-medium">Certificate in Progress</p>
+                  </div>
+                </div>
+              ) : (
                 <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
                   <Image
                     src={certificate.image}
@@ -117,7 +122,10 @@ export default function CertificatesSection() {
                   />
                 </div>
               )}
-
+              <h3 className="text-xl font-bold text-center text-gray-800 dark:text-white mb-2">{certificate.title}</h3>
+              <p className="text-center text-primary dark:text-primary-400 mb-2">{certificate.issuer}</p>
+              <p className="text-center text-gray-600 dark:text-gray-400 mb-4">{certificate.period}</p>
+              
               <div className="flex justify-center">
                 {certificate.status ? (
                   <span className="text-yellow-500 dark:text-yellow-400 font-medium">
@@ -132,7 +140,16 @@ export default function CertificatesSection() {
                   >
                     View Certificate <i className="fas fa-external-link-alt text-sm"></i>
                   </a>
-                ) : null}
+                ) : (
+                  <a 
+                    href={certificate.image}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white bg-primary hover:bg-primary-600 dark:bg-primary-600 dark:hover:bg-primary-700 font-medium rounded-lg px-4 py-2 inline-flex items-center gap-2 transition-colors"
+                  >
+                    View Certificate <i className="fas fa-external-link-alt text-sm"></i>
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
