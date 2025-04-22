@@ -69,7 +69,7 @@ export default function Navbar() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <span className="text-xl font-bold text-primary dark:text-primary-400">Abhishek Singh</span>
+              <span className="text-xl font-bold text-primary dark:text-primary-400">Aman Yadav</span>
             </motion.a>
           </div>
           <div className="hidden md:flex items-center space-x-6">

@@ -7,11 +7,12 @@ export default function SkillsSection() {
   const technicalSkills = [
     { name: "C++", level: 90, proficiency: "Advanced" },
     { name: "Java", level: 75, proficiency: "Intermediate" },
-    { name: "C", level: 85, proficiency: "Advanced" },
+    { name: "PHP", level: 85, proficiency: "Advanced" },
     { name: "HTML & CSS", level: 80, proficiency: "Intermediate" },
+    { name: "React", level: 80, proficiency: "Intermediate" },
     { name: "MySQL", level: 70, proficiency: "Intermediate" },
-    { name: "R", level: 65, proficiency: "Intermediate" },
-    { name: "Tableau", level: 75, proficiency: "Intermediate" },
+    { name: "MongoDB", level: 65, proficiency: "Intermediate" },
+    { name: "Node.js", level: 75, proficiency: "Intermediate" },
     { name: "MS Excel", level: 80, proficiency: "Intermediate" },
   ];
 
@@ -22,14 +23,7 @@ export default function SkillsSection() {
     { name: "Adaptability", icon: "fas fa-sync-alt" },
   ];
 
-  const interests = [
-    "Machine Learning",
-    "Data Analysis",
-    "Algorithm Design",
-    "Web Development",
-    "Cloud Computing",
-    "Programming",
-  ];
+  
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -113,26 +107,7 @@ export default function SkillsSection() {
               </div>
             </motion.div>
 
-            <motion.div
-              className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-md"
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">Areas of Interest</h3>
-              <div className="flex flex-wrap gap-3">
-                {interests.map((interest, index) => (
-                  <motion.span
-                    key={index}
-                    className="px-4 py-2 rounded-full bg-primary-100 dark:bg-primary-900/40 text-primary-700 dark:text-primary-300 font-medium"
-                    variants={itemVariants}
-                  >
-                    {interest}
-                  </motion.span>
-                ))}
-              </div>
-            </motion.div>
+            
           </div>
         </div>
       </div>

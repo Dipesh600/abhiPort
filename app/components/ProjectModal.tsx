@@ -32,7 +32,8 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
       {isOpen && (
         <div className="fixed inset-0 z-50 overflow-y-auto">
           <motion.div
-            className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+            className="fixed inset-0 bg-gray-500 bg-opacity-0 transition-opacity"
+            style={{ backdropFilter: 'none' }}
             initial="hidden"
             animate="visible"
             exit="hidden"

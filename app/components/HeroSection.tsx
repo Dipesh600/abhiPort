@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-// Remove the SVG import and use the public path instead
-// import profile from "../assets/profile.svg";
+
 
 export default function HeroSection() {
   return (
@@ -19,7 +18,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Hello, I'm <span className="text-primary dark:text-primary-400">Abhishek Kumar Singh</span>
+              Hello, I'm <span className="text-primary dark:text-primary-400">Aman Yadav</span>
             </motion.h1>
             <motion.h2
               className="text-2xl md:text-3xl font-medium text-gray-700 dark:text-gray-300 mb-6"
@@ -35,8 +34,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              A passionate learner with interests in Machine Learning, Data Analysis, and Web Development.
-              Currently pursuing B.Tech in Computer Science Engineering at Lovely Professional University.
+              I’m passionate about building user-friendly web apps and solving real-world problems with code. From dynamic movie sites to e-commerce platforms, I love crafting clean, functional experiences using C++, PHP, Java, and modern frameworks like React and Node.js.
             </motion.p>
             <motion.div
               className="flex flex-wrap gap-4"
@@ -65,8 +63,8 @@ export default function HeroSection() {
                 View Projects
               </a>
               <a
-                href="/assets/Abhishek_kumar_singh_12204322_ General_cv.docx"
-                download="Abhishek_Kumar_Singh_CV.docx"
+                href="/assets/Amancvtpc2.pdf"
+                download="Aman_Yadav_cv.pdf"
                 className="flex items-center gap-2 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium py-3 px-6 rounded-md border border-gray-300 dark:border-gray-600 transition duration-300"
               >
                 <i className="fas fa-download"></i> Download CV
@@ -79,7 +77,7 @@ export default function HeroSection() {
               transition={{ duration: 0.5, delay: 0.8 }}
             >
               <a
-                href="https://linkedin.com/in/abhisheksingh124"
+                href="http://www.linkedin.com/in/amany31203"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary-400 transition-colors duration-300"
@@ -88,7 +86,7 @@ export default function HeroSection() {
                 <i className="fab fa-linkedin text-2xl"></i>
               </a>
               <a
-                href="https://github.com/AbhishekSingh6265"
+                href="https://github.com/aman-yadavdev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary-400 transition-colors duration-300"
@@ -97,14 +95,14 @@ export default function HeroSection() {
                 <i className="fab fa-github text-2xl"></i>
               </a>
               <a
-                href="mailto:abhi6265kaushik@gmail.com"
+                href="mailto:amany31203@gmail.com"
                 className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary-400 transition-colors duration-300"
                 aria-label="Email"
               >
                 <i className="fas fa-envelope text-2xl"></i>
               </a>
               <a
-                href="tel:+916265433095"
+                href="tel:+91-8545007692"
                 className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary-400 transition-colors duration-300"
                 aria-label="Phone"
               >

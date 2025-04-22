@@ -1,0 +1,4 @@
+.no-blur {
+  filter: none !important;
+  backdrop-filter: none !important;
+}

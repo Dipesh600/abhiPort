@@ -4,61 +4,44 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function CertificatesSection() {
-  const certificates = [
-    {
-      id: 1,
-      title: "Cloud Computing",
-      issuer: "NPTEL",
-      period: "Jun 2024 - Dec 2024",
-      icon: "fas fa-cloud",
-      status: "In Progress",
-      image: "/assets/fundamentals.jpeg"
-    },
-    {
-      id: 2,
-      title: "Supervised Machine Learning: Regression and Classification",
-      issuer: "Coursera",
-      period: "Aug 2024",
-      icon: "fas fa-brain",
-      link: "https://coursera.org/verify/Y08PQ1UBLXMF",
-      image: "/assets/mlm.jpeg"
-    },
-    {
-      id: 3,
-      title: "Data Analysis with Tableau",
-      issuer: "Coursera",
-      period: "Feb 2023",
-      icon: "fas fa-chart-pie",
-      link: "https://coursera.org/verify/4PXU84YPFGA5",
-      image: "/assets/fundamentals.jpeg"
-    },
-    {
-      id: 4,
-      title: "DSA Self Paced",
-      issuer: "Geeks For Geeks",
-      period: "Mar 2024",
-      icon: "fas fa-code",
-      link: "https://media.geeksforgeeks.org/courses/certificates/86498fbe80b836a1bb15c9b7d7c0a0a9.pdf",
-      image: "/assets/gfg.jpg"
-    },
-    {
-      id: 5,
-      title: "Programming in C++: A Hands-on Introduction",
-      issuer: "Coursera",
-      period: "Nov 2023",
-      icon: "fab fa-c",
-      link: "https://www.coursera.org/account/accomplishments/specialization/YBAC663PLLTJ",
-      image: "/assets/c++.jpeg"
-    },
-    {
-      id: 6,
-      title: "Community Development Project",
-      issuer: "Shishtinant Social Welfare Foundation",
-      period: "2023",
-      icon: "fas fa-hands-helping",
-      image: "/assets/community_certificate.jpeg",
-    },
-  ];
+    const certificates = [
+      {
+        id: 1,
+        title: "Dynamic Programming",
+        issuer: "Coursera",
+        period: "Apr 5, 2024",
+        icon: "fas fa-project-diagram",
+        link: "https://coursera.org/verify/Q7ZW5LR6Z27R",
+        image: "/assets/dynamicProgramming.jpg"
+      },
+      {
+        id: 2,
+        title: "Server side JavaScript with Node.js",
+        issuer: "Coursera",
+        period: "Apr 24, 2024",
+        icon: "fas fa-server",
+        link: "https://coursera.org/verify/TJB3E64BSZ73",
+        image: "/assets/serverSideJavaScript.jpg"
+      },
+      {
+        id: 3,
+        title: "Build AI Apps with ChatGPT, Dall-E, and GPT-4",
+        issuer: "Coursera",
+        period: "Apr 23, 2024",
+        icon: "fas fa-robot",
+        link: "https://coursera.org/verify/BEVS7564CT4P",
+        image: "/assets/buildAIApps.jpg"
+      },
+      {
+        id: 4,
+        title: "DSA Self PacedMastering Data Structures and Algorithms using C a n d C++",
+        issuer: "Udemy",
+        period: "Nov 24, 2023",
+        icon: "fas fa-code",
+        link: "https://www.udemy.com/certificate/UC-743e83d8-Of3f-4ad4-bd76-027fb11d8d13/",
+        image: "/assets/MasteringDSA.jpg"
+      },
+    ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -105,33 +88,20 @@ export default function CertificatesSection() {
               className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-md transition-shadow p-6"
               variants={itemVariants}
             >
-              {certificate.status === "In Progress" ? (
-                <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                  <div className="text-center">
-                    <i className="fas fa-clock text-4xl text-primary dark:text-primary-400 mb-2"></i>
-                    <p className="text-gray-600 dark:text-gray-300 font-medium">Certificate in Progress</p>
-                  </div>
-                </div>
-              ) : (
-                <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
-                  <Image
-                    src={certificate.image}
-                    alt={`${certificate.title} Certificate`}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              )}
+              <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
+                <Image
+                  src={certificate.image}
+                  alt={`${certificate.title} Certificate`}
+                  fill
+                  className="object-contain"
+                />
+              </div>
               <h3 className="text-xl font-bold text-center text-gray-800 dark:text-white mb-2">{certificate.title}</h3>
               <p className="text-center text-primary dark:text-primary-400 mb-2">{certificate.issuer}</p>
               <p className="text-center text-gray-600 dark:text-gray-400 mb-4">{certificate.period}</p>
               
               <div className="flex justify-center">
-                {certificate.status ? (
-                  <span className="text-yellow-500 dark:text-yellow-400 font-medium">
-                    {certificate.status}
-                  </span>
-                ) : certificate.link ? (
+                {certificate.link ? (
                   <a 
                     href={certificate.link}
                     target="_blank"

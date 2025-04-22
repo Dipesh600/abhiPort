@@ -31,15 +31,13 @@ export default function AboutSection() {
             <div className="md:w-1/2">
               <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">Who I Am</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                I am an aspiring computer engineer currently pursuing my B.Tech degree at Lovely Professional University. 
-                My academic journey is focused on developing practical skills in machine learning, data analysis, and web development.
+              I'm Aman Yadav, a Computer Science student at Lovely Professional University with a strong interest in full-stack development and problem-solving. I enjoy turning complex problems into simple, elegant solutions through code. Whether it's building a feature-rich e-commerce site or crafting a responsive movie platform, I aim to create meaningful digital experiences.
               </p>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                I'm driven by curiosity and a commitment to continuous learning. My goal is to apply my technical knowledge to solve real-world problems
-                through innovative technological solutions.
+              With hands-on experience in C++, Java, PHP, and frameworks like React and Node.js, I’m constantly learning and improving. I also value collaboration, clear communication, and the impact of well-written code.
               </p>
               <p className="text-gray-600 dark:text-gray-400">
-                When I'm not coding, I enjoy participating in hackathons, cultural events, and expanding my knowledge through online courses and certifications.
+              When I’m not coding, you’ll find me exploring new tech, contributing to community projects, or diving deeper into data structures and algorithms.
               </p>
             </div>
             <div className="md:w-1/2">
@@ -47,15 +45,15 @@ export default function AboutSection() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <h4 className="text-primary dark:text-primary-400 font-medium mb-2">Name</h4>
-                  <p className="text-gray-600 dark:text-gray-400">Abhishek Kumar Singh</p>
+                  <p className="text-gray-600 dark:text-gray-400">Aman Yadav</p>
                 </div>
                 <div>
                   <h4 className="text-primary dark:text-primary-400 font-medium mb-2">Email</h4>
-                  <p className="text-gray-600 dark:text-gray-400">abhi6265kaushik@gmail.com</p>
+                  <p className="text-gray-600 dark:text-gray-400">amany31203@gmail.com</p>
                 </div>
                 <div>
                   <h4 className="text-primary dark:text-primary-400 font-medium mb-2">Phone</h4>
-                  <p className="text-gray-600 dark:text-gray-400">+91-6265433095</p>
+                  <p className="text-gray-600 dark:text-gray-400">+91-8545007692</p>
                 </div>
                 <div>
                   <h4 className="text-primary dark:text-primary-400 font-medium mb-2">Location</h4>
@@ -72,7 +70,7 @@ export default function AboutSection() {
               </div>
               <div className="mt-6 flex space-x-4">
                 <a
-                  href="https://linkedin.com/in/abhisheksingh124"
+                  href="http://www.linkedin.com/in/amany31203"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition duration-300"
@@ -80,7 +78,7 @@ export default function AboutSection() {
                   <i className="fab fa-linkedin mr-2"></i> LinkedIn
                 </a>
                 <a
-                  href="https://github.com/AbhishekSingh6265"
+                  href="https://github.com/aman-yadavdev"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-800 text-white px-4 py-2 rounded-md transition duration-300"

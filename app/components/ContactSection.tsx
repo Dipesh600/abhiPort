@@ -52,15 +52,15 @@ export default function ContactSection() {
     {
       id: 1,
       title: "Email",
-      value: "abhi6265kaushik@gmail.com",
-      href: "mailto:abhi6265kaushik@gmail.com",
+      value: "amany31203@gmail.com",
+      href: "mailto:amany31203@gmail.com",
       icon: "fas fa-envelope",
     },
     {
       id: 2,
       title: "Phone",
-      value: "+91-6265433095",
-      href: "tel:+916265433095",
+      value: "+91-8545007692",
+      href: "tel:+91-8545007692",
       icon: "fas fa-phone-alt",
     },
     {
@@ -73,15 +73,15 @@ export default function ContactSection() {
     {
       id: 4,
       title: "LinkedIn",
-      value: "linkedin.com/in/abhisheksingh124",
-      href: "https://linkedin.com/in/abhisheksingh124",
+      value: "http://www.linkedin.com/in/amany31203",
+      href: "http://www.linkedin.com/in/amany31203",
       icon: "fab fa-linkedin",
     },
     {
       id: 5,
       title: "GitHub",
-      value: "github.com/AbhishekSingh6265",
-      href: "https://github.com/AbhishekSingh6265",
+      value: "github.com/aman-yadavdev",
+      href: "https://github.com/aman-yadavdev",
       icon: "fab fa-github",
     },
   ];
