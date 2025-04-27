@@ -15,7 +15,7 @@ export default function ProjectsSection() {
       tags: ["R", "Machine Learning", "Data Analysis"],
       description:
         "Analyzed breast cell biopsy images using various machine learning algorithms to classify tumors as malignant or benign for early and accurate cancer detection.",
-      icon: "fas fa-microscope",
+      image: "/assets/B_cancer.jpeg",
       gradientFrom: "from-primary-500",
       gradientTo: "to-secondary-500",
       fullDescription:
@@ -39,7 +39,7 @@ export default function ProjectsSection() {
       tags: ["Tableau", "Data Visualization", "Analytics"],
       description:
         "Developed an interactive Tableau dashboard to track sales metrics across various dimensions, providing real-time visual insights for business decision-making.",
-      icon: "fas fa-chart-bar",
+      image: "/assets/Accuracy.jpeg",
       gradientFrom: "from-blue-500",
       gradientTo: "to-purple-500",
       fullDescription:
@@ -63,7 +63,7 @@ export default function ProjectsSection() {
       tags: ["HTML", "CSS", "JavaScript"],
       description:
         "Developed a responsive website for a hypothetical NGO using HTML, CSS, and JavaScript with a user-friendly interface and interactive features.",
-      icon: "fas fa-leaf",
+      image: "/assets/B_cancer.jpeg", // You can change this to any other image
       gradientFrom: "from-green-500",
       gradientTo: "to-teal-500",
       fullDescription:
@@ -138,8 +138,12 @@ export default function ProjectsSection() {
               <div
                 className={`h-48 bg-gradient-to-r ${project.gradientFrom} ${project.gradientTo} relative`}
               >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <i className={`${project.icon} text-white text-5xl`}></i>
+                <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="object-cover w-full h-full"
+                  />
                 </div>
                 <div className="absolute top-3 right-3 bg-white dark:bg-gray-800 bg-opacity-90 dark:bg-opacity-90 px-3 py-1 rounded-full text-xs font-semibold text-gray-700 dark:text-gray-300">
                   {project.period}
