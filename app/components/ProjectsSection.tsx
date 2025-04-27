@@ -63,7 +63,7 @@ export default function ProjectsSection() {
       tags: ["HTML", "CSS", "JavaScript"],
       description:
         "Developed a responsive website for a hypothetical NGO using HTML, CSS, and JavaScript with a user-friendly interface and interactive features.",
-      image: "/assets/B_cancer.jpeg", // You can change this to any other image
+      image: "/assets/ngo.jpeg", // You can change this to any other image
       gradientFrom: "from-green-500",
       gradientTo: "to-teal-500",
       fullDescription:
