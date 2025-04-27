@@ -122,7 +122,7 @@ export default function HeroSection() {
               <div className="bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/50 dark:to-primary-800/50 p-3 rounded-full shadow-lg">
                 <div className="bg-white dark:bg-gray-800 rounded-full p-3">
                   <img
-                    src="/assets/profile.jpeg"
+                    src="/assets/profile.png"
                     alt="Abhishek Kumar Singh"
                     className="rounded-full h-64 w-64 md:h-80 md:w-80 object-cover shadow-inner"
                   />
